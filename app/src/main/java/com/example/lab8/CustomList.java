@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import org.jetbrains.annotations.TestOnly;
+import org.junit.Test;
+
 import java.util.ArrayList;
 
 public class CustomList extends ArrayAdapter<City> {
@@ -44,13 +47,21 @@ public class CustomList extends ArrayAdapter<City> {
         return view;
 
     }
-
+    /**
+     * This gets size of the list
+     * @return
+     */
     public int getCount(){
         return cities.size();
     }
 
+    /**
+     * this adds a city object to the list
+     * for the first phase it will be
+     * empty @param city
+     */
+
     public void addCity(City city){
 
     }
-
 }

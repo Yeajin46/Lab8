@@ -49,7 +49,13 @@ public class CustomListTest {
 
     @Test
     public void deleteCityTest() {
-
+        list = MockCityList();
+        int listSize = list.getCount();
+        City newCity = new City("Estevan", "SK");
+        list.addCity(newCity);
+        assertEquals(list.getCount(), listSize + 1);
+        list.deleteCity(newCity);
+        assertEquals(list.getCount(), listSize);
     }
 
     @Test
